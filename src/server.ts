@@ -10,6 +10,7 @@ import authRoutes from './routes/auth';
 import tenantRoutes from './routes/tenants';
 import schemaRoutes from './routes/schemas';
 import contentRoutes from './routes/content';
+import userRoutes from './routes/users';
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/tenants', tenantRoutes);
 app.use('/api/schemas', schemaRoutes);
 app.use('/api/content', contentRoutes);
+app.use('/api/users', userRoutes);
 
 // Error handling middleware (must be last)
 app.use(errorHandler as any);
